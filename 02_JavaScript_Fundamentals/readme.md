@@ -267,3 +267,274 @@ document.body.innerHTML=html;
         - setHours() - for set hours for given date.
         - setMinutes() - for set minutes for given date.
         - setSeconds() - for set seconda for given date.
+
+## 16_If Statement
+
+### If statement
+
+        - Syntax
+                if ( condition) {
+                        statement block -1 // if condition become true
+                } else {
+                        statement block -2 // condition become false
+                }
+
+### comparison operators
+
+        - == (equal to)
+                - Satisfy when values are equal.
+        - != (not equal to)
+                - Satisfy when values are not equal.
+        - ===
+                - Satisfy when values and types of both items are equal.
+        - !==
+                - Satisfy when values and types are not equal
+        - > (greater than)
+                - Satisfy when first item is greater than second one.
+        - < (less than)
+                - Satisfy when first item in less than second one.
+        - >= (greaterthan equal to)
+                - Satisfy when first item greater than or equal to second one.
+        - <= (less than equal to) - Satisfy when first item is lessthan or equal to second one
+
+### if else
+
+        - Syntax
+                if( condition-1){
+                        statement block - 1
+                } else if( condition-2){
+                        statement block - 2
+                }
+                .
+                .
+                .
+                 else if(condition -n){
+                        statement block - n
+                } else {
+                         default statement
+                }
+
+### Logical Operations
+
+        - && (AND)
+                - check both  conditions are satisfied.
+        - || (OR)
+                - check if any of the condition is satisfied among both.
+        - ternary operator (condition? statement 1: statement 2)
+                - if condition is true then take  statement-1 otherwise choose statement-2
+
+### Without Braces
+
+        - we can write if statements without braces.
+                eg. if (id == 10)
+                        console.log("ten")
+                    else
+                        console.log("not ten")
+
+## 17_Switches
+
+        - Syntax
+                switch (expression) {
+                        case vale-1 :
+                           statement block-1
+                           break;
+                        case vale-2 :
+                           statement block-2
+                           break;
+                        .
+                        .
+                        .
+                        case value-n :
+                           statement block-n
+                           break;
+                        default :
+                           default statement
+                           break;
+                }
+
+## 18_Function Declaration
+
+### Function declaration
+
+        - function <functionname>() {
+                do something here
+        }
+        - call function like
+                <function name>();
+        - function with console
+                function test() {
+                   console.log("hello");
+                }
+                test(); // display 'hello' on the console screen
+
+        - funciton with return
+                function test(){
+                        return "hello";
+                }
+                console.log(test()); // display 'hello' on the console sreen
+
+        - function with parameters
+                - function test(name ="julie") {
+                        return 'hello ' + name;
+                }
+                console.log(test("Sara")); // print 'hello Sara'
+
+                -  // 'julie' is the default value of name in above example. if there no parameter value passed then pnamerint 'hello julie'
+
+### Immedialety involcable function expression - IIFE
+
+        - Syntax
+                (function(<parameter value>) {
+                statements- do something here
+                })(<parameter value>);
+        - Eg.
+                (function(name) {
+                        console.log("hi " +name)
+                })('smith')
+                // display  'hi smith'
+
+### Property Method
+
+        - when a function is put inside an object is called method
+        - eg.
+                const todo = {
+                        add : function(){
+                                console.log("add");
+                        },
+                        edit : function(no){
+                                console.log("edit " + no);
+                        }
+                }
+
+        - declare a function outside of the object
+                - todo.delete = function() {
+                        console.log("delete");
+                }
+        - call the above functions
+                 todo.add();
+                 todo.edit(33);
+                 todo.delete()
+
+## 19_General Loops
+
+### for loop
+
+        - Syntax
+                for(initialization; condition; increament) {
+                        statement block
+                }
+
+### while loop
+
+        - Syntax
+                while (condition) {
+                        statement block
+                        increamental section // if needed
+                }
+
+### do while
+
+        - Syntax
+         do {
+                 statement block
+                  increamental section // if needed
+         } while (condition)
+
+         - while loop executed atleast 1 time.
+
+### Loop Through Array
+
+        - eg.
+                const numbers=['one','two','three']
+                for (let i=0;i < numbers.length;i++) {
+                        console.log(numbers[i])
+                }
+        - output
+                one
+                two
+                three
+
+### forEach loop
+
+        - numbers.forEach(function(number){
+                console.log(number);
+        })
+        - output like
+                one
+                two
+                three
+
+### for in loop
+
+        - for (x in number){
+                console.log(`${x} : ${number}`);
+        }
+        - output like
+                0 : one
+                1 : two
+                2 : three
+
+### MAP
+
+        - const users =[
+                {id :2},
+                {id :3},
+                {id :4}
+        ]
+        const ids= users.map(function(user){
+                return user.id // return each element's id
+        });
+        consoel.log(ids);
+
+## 20_Window objects
+
+### prompt and confirm
+
+        - prompt - accept input from user.
+                const input = prompt();
+        - confirm - confirm a decision
+                - confirm("are you sure ?) // there are two buttons ok and cancel
+                - eg. if(confirm("are you sure ?")) {
+                        console.log("yes");
+                } else {
+                        console.log("no)
+                }
+
+### Window
+
+         - window.outerWidth; - return outer width of the browser window.
+         -  window.outerHeight; - return outer height of the browser window.
+         - window.innerWidth; - return inner width of thew browser window (if inspect open then its not added).
+         - window.innerHeight; -return inner Height of the browser window.
+         window. scrollY - return scroll position of y axis.
+         - window.scrollX - return scroll position of x axis.
+         - window.location - return location details,host name post name etc..
+                - hostname,href,port,search,reload etc..
+        - window.history.length - length of the history(how may sites visited previously in current session).
+        - window.navigator -return basic detials of browser like appName,appversion,userAgent,platform,vendor,language etc..
+
+## 21_Block scope of let const
+
+### global scope
+
+        - all over the program.
+
+### functional scope
+
+        - variables declare inside a function have scope only inside function(scope only inside the  function brackets{})
+
+### block scope
+
+        -global variable declared in var data type have scope on a blocks(like if statement).
+        - eg.
+             var a = 2;
+             let b = 4;
+             const c = 5;
+             if (true) {
+                     var a = 5;
+                     let b = 6;
+                     const c = 8;
+             }
+             console.log(a) // return 5
+             console.log(b) // return 4
+             console.log(c) // return 5
