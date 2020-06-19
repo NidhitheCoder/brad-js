@@ -71,7 +71,6 @@ function addTask(e) {
 
 // store into local storage
 function storeTaskInLocalStorage(task) {
-
   let tasks;
   if (localStorage.getItem("tasks") === null) {
     tasks = [];
@@ -88,28 +87,28 @@ function removeTask(e) {
     if (confirm("are you sure ?")) {
       e.target.parentElement.parentElement.remove();
 
-    //   remove from LS
-    removeTaskFromLocalStorage(e.target.parentElement.parentElement)
+      //   remove from LS
+      removeTaskFromLocalStorage(e.target.parentElement.parentElement);
     }
   }
 }
 
 // remove tasks from local storage
-function removeTaskFromLocalStorage(taskItem){
-console.log(taskItem);
-let tasks;
-if(localStorage.getItem('tasks') === null) {
-tasks = [];
-} else { 
-    tasks = JSON.parse(localStorage.getItem('tasks'));
-}
- tasks.forEach(function(task,index){
-     if (taskItem.textContent === task){
-          tasks.splice(index,1);
-     }
- })
+function removeTaskFromLocalStorage(taskItem) {
+  console.log(taskItem);
+  let tasks;
+  if (localStorage.getItem("tasks") === null) {
+    tasks = [];
+  } else {
+    tasks = JSON.parse(localStorage.getItem("tasks"));
+  }
+  tasks.forEach(function(task, index) {
+    if (taskItem.textContent === task) {
+      tasks.splice(index, 1);
+    }
+  });
 
- localStorage.setItem('tasks',JSON.stringify(tasks));
+  localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
 // clear tasks
@@ -119,13 +118,13 @@ function clearTasks(e) {
   while (taskList.firstChild) {
     taskList.removeChild(taskList.firstChild);
   }
-//   clear tasks from ls
+  //   clear tasks from ls
   clearTaskFromLocalStorage();
 }
 
 // clear tasks from local storage
 function clearTaskFromLocalStorage() {
-    localStorage.clear();
+  localStorage.clear();
 }
 
 // filter function

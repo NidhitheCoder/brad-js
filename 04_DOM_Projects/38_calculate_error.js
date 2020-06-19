@@ -56,6 +56,5 @@ function showError(error) {
 }
 
 // clear error
-// function clearError() {lister 
-  document.querySelector(".alert").remove();
-}
+// function clearError() {lister
+document.querySelector(".alert").remove();
