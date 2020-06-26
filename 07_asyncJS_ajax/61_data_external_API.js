@@ -12,14 +12,14 @@ function getJokes(e) {
       let output = "";
       if (response.type === "success") {
         response.value.forEach(function(joke) {
-output += `
+          output += `
 <li>${joke.joke}</li>
-`
+`;
         });
       } else {
         output += `<li>something went wrong <li>`;
       }
-      document.querySelector('.jokes').innerHTML = output;
+      document.querySelector(".jokes").innerHTML = output;
     }
   };
   xhr.send();
