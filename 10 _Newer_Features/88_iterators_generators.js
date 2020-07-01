@@ -11,7 +11,7 @@
 //     }
 // }
 
-// // create an array of names 
+// // create an array of names
 // const namesArray = ['jack','john','julie'];
 
 // // init iterator and pass in the names array
@@ -21,7 +21,6 @@
 // console.log(names.next().value);
 // console.log(names.next().value);
 // console.log(names.next().value);
-
 
 // // generators examples
 // function* sayNames() {  //funciton* means tell to js this is not just a function it is a generator
@@ -36,14 +35,13 @@
 // console.log(names.next().value);
 // console.log(names.next().value);
 
-
 // ID creater using generaton
 
-function*  createIDs() {
-    let index = 1; 
-    while(true) {
-        yield index++;
-    }
+function* createIDs() {
+  let index = 1;
+  while (true) {
+    yield index++;
+  }
 }
 
 const gen = createIDs();

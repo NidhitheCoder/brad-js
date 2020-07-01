@@ -2,14 +2,14 @@
 const map1 = new Map();
 
 // set keys
-const key1 = 'some string ',
-    key2 = {},
-    key3 = function(){};
+const key1 = "some string ",
+  key2 = {},
+  key3 = function() {};
 
 // set map values by key
-map1.set (key1, 'value of key 1');
-map1.set (key2,'value of key 2');
-map1.set(key3,'value of key 3');
+map1.set(key1, "value of key 1");
+map1.set(key2, "value of key 2");
+map1.set(key3, "value of key 3");
 
 // // get values by key
 // console.log(map1.get(key1),map1.get(key2),map1.get(key3));
@@ -17,8 +17,7 @@ map1.set(key3,'value of key 3');
 // // count values
 // console.log(map1.size);
 
-
-// Itteration through the maps 
+// Itteration through the maps
 
 // // loop using for ...of to get keys and values
 // for (let [key,value] of map1) {
@@ -40,14 +39,13 @@ map1.set(key3,'value of key 3');
 //     console.log(`${key} : ${value}`);
 // })
 
+// CONVERT TO ARRAYS
 
-// CONVERT TO ARRAYS 
-
-// // create an arraynof key value pairs 
+// // create an arraynof key value pairs
 // const keyValArr = Array.from(map1);
 // console.log(keyValArr);
 
-// // create an array of the values 
+// // create an array of the values
 // const valArr = Array.from(map1.values());
 // console.log(valArr);
 

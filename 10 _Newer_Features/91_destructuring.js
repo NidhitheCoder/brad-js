@@ -1,4 +1,4 @@
-// // ?destructuring assignment 
+// // ?destructuring assignment
 // let a,b;
 // [a,b] = [100,200];
 // console.log(b);
@@ -14,12 +14,12 @@
 // ({a,b, ...rest} = {a:100,b:200,c:300,d:400,e:500}); // destructuring assignment
 // console.log(rest);
 
-// // // array destructuring 
+// // // array destructuring
 // // const people = ['john','julie','jack'];
 // // const [person1,person2,person3] = people;
 // // console.log(person1,person2,person3);
 
-// // parse array returned from function 
+// // parse array returned from function
 // function getPeople() {
 //     return ['john','meth','mike'];
 // }
@@ -29,14 +29,14 @@
 
 // object destructuring
 const person = {
-    name : 'john due',
-    age : 32,
-    city : 'Miami',
-    gender : 'Age',
-    sayHello : function() {
-        console.log('hello');
-    }
-}
+  name: "john due",
+  age: 32,
+  city: "Miami",
+  gender: "Age",
+  sayHello: function() {
+    console.log("hello");
+  }
+};
 
 // // old ES5 way
 // const name = person.name,
@@ -44,7 +44,7 @@ const person = {
 //     city = person.city,
 //     gender = person.gender;
 
-// new es6 destructuring 
-const {name,age,city,sayHello} = person;
-console.log(name,age,city);
+// new es6 destructuring
+const { name, age, city, sayHello } = person;
+console.log(name, age, city);
 sayHello();
