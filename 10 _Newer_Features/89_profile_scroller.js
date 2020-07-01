@@ -25,10 +25,9 @@ const data = [
   }
 ];
 
-
 const profiles = ProfileIterator(data);
 
-//  Call first element 
+//  Call first element
 nextProfile();
 
 // nextEvent
@@ -36,10 +35,10 @@ document.getElementById("next").addEventListener("click", nextProfile);
 
 // next profile display
 function nextProfile() {
-    const currentProfile = profiles.next().value;
-  
-    if( currentProfile !== undefined) {
-document.getElementById('profileDisplay').innerHTML = `
+  const currentProfile = profiles.next().value;
+
+  if (currentProfile !== undefined) {
+    document.getElementById("profileDisplay").innerHTML = `
 <ul class="list-group">
 <li class="list-group-item">Name : ${currentProfile.name}</li>
 <li class="list-group-item">Age : ${currentProfile.age}</li>
@@ -48,12 +47,13 @@ document.getElementById('profileDisplay').innerHTML = `
 </ul>
 `;
 
-document.getElementById('imgDisplay').innerHTML = `<img src="${currentProfile.image}" />`
-    } else {
-
-        // no more profiles
-        window.location.reload() // for reloading the page again 
-    }
+    document.getElementById(
+      "imgDisplay"
+    ).innerHTML = `<img src="${currentProfile.image}" />`;
+  } else {
+    // no more profiles
+    window.location.reload(); // for reloading the page again
+  }
 }
 
 // profile iterator function
