@@ -9,6 +9,7 @@ body {
   justify-content: center;
   align-items: center;
   color: #fff;
+  height: 100vh;
 }
 
 .row {
