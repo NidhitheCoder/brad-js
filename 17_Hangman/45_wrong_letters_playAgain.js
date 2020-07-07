@@ -37,29 +37,26 @@ ${selectedWord
 function updateWrongLettersEl() {
   // Display wrong Letters
   wrongLetterEl.innerHTML = `
-  ${wrongLetters.length > 0 ? '<p>Wrong</p>' : ''}
+  ${wrongLetters.length > 0 ? "<p>Wrong</p>" : ""}
   ${wrongLetters.map(letter => `<span>${letter}</span>`)}
   `;
 
   //  Display parts
-  figureParts.forEach((part,index) => {
+  figureParts.forEach((part, index) => {
     const errors = wrongLetters.length;
-    if(index < errors) {
-      part.style.display = 'block';
+    if (index < errors) {
+      part.style.display = "block";
     } else {
-      part.style.display = 'none';
+      part.style.display = "none";
     }
-  })
+  });
 
   // Check if lost
-  if(wrongLetters.length === figureParts.length) {
-    finalMessage.innerText = 'Unfortunately you lost..!';
-    popup.style.display = 'flex';
+  if (wrongLetters.length === figureParts.length) {
+    finalMessage.innerText = "Unfortunately you lost..!";
+    popup.style.display = "flex";
   }
 }
-
-
-
 
 // Show Notification
 function showNotification() {
@@ -94,15 +91,15 @@ window.addEventListener("keydown", e => {
 });
 
 // Restart game and play again
-playAgainBtn.addEventListener('click',() => {
-//  Empty Arrays
-currectLetters.splice(0);
-wrongLetters.splice(0);
+playAgainBtn.addEventListener("click", () => {
+  //  Empty Arrays
+  currectLetters.splice(0);
+  wrongLetters.splice(0);
 
-selectedWord = words[Math.floor(Math.random() * words.length)];
-displayWord();
-updateWrongLettersEl();
-popup.style.display = "none";
-})
+  selectedWord = words[Math.floor(Math.random() * words.length)];
+  displayWord();
+  updateWrongLettersEl();
+  popup.style.display = "none";
+});
 
 displayWord();
