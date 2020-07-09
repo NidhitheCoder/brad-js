@@ -56,7 +56,7 @@ function getMealById(mealId) {
     });
 }
 
-// Get random meal / fetch random meal
+//  fetch random meal with API
 function getRandomMeal() {
   //  clear meals and headings
   mealsEl.innerHTML = "";
