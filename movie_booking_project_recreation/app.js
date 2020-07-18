@@ -32,14 +32,6 @@ movies.addEventListener('change',(e) => {
 })
 
 document.addEventListener('DOMContentLoaded',(e) => {
-//   const selectedSeates = JSON.stringify(localStorage.getItem('selectedSeates'));
-//   if(selectedSeates !== null && selectedSeates.length > 0) {
-// seats.forEach((seat,index) =>{
-// if(selectedSeates.indexOf(index) > -1) {
-//   seat.classList.add('selected');
-// }
-// })
-//   }
 const selectedSeates = JSON.parse(localStorage.getItem("selectedSeates"));
 if (selectedSeates !== null && selectedSeates.length > 0) {
   seats.forEach((seat, index) => {
@@ -49,5 +41,5 @@ if (selectedSeates !== null && selectedSeates.length > 0) {
   })
 }
 count.innerText = JSON.stringify(+localStorage.getItem('count'));
-price.innerText = JSON.stringify(+localStorage.getItem('moviePrice')) ;
+price.innerText = JSON.stringify(+localStorage.getItem('moviePrice')) * JSON.stringify(+localStorage.getItem('count')) ;
 })
