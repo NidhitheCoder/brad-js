@@ -1,0 +1,38 @@
+body{
+    background: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container{
+    width: 100%;
+}
+
+#display-screen{
+    width: 500px;
+    height: 120px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.row{
+    list-style-type: none;
+    background-color: khaki;
+    border:1px solid gray;
+    display: flex;
+    flex-direction: row;
+    border-radius: 3px;
+}
+
+.row-selected{
+    background-color:rgba(95, 231, 95, 0.555);
+}
+
+.row li{
+    padding:10px;
+    border:1px solid #666;
+    border-radius: 5px;
+}
