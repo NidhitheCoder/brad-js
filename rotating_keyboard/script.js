@@ -8,21 +8,20 @@ document.addEventListener("click", rotate);
 function rotate() {
   let interval = 1;
   rows.forEach(row => {
-    let time = setInterval(() => {
-      row.classList.add("row-selected");
-    }, 2000 * interval);
-    // clearInterval(time-1);
-    row.classList.remove("row-selected");
+    let time = rotateRow(row, interval);
+
+    setInterval(() => {
+      row.classList.remove("row-selected");
+      clearInterval(time);
+    }, 2000 * (interval + 1));
+
     interval++;
   });
-
-  // row.classList.toggle('row-selected');
 }
 
-// // Rotating keyboard Focus row wise
-// function rotateRow(element) {
-//     rows.forEach(()=>{
-//         element.classList.add('row-selected');
-//     })
-
-// }
+// Rotating keyboard Focus row wise
+function rotateRow(element, inter) {
+  return setInterval(() => {
+    element.classList.add("row-selected");
+  }, 2000 * inter);
+}
