@@ -1,55 +1,55 @@
-let price = 28.99; // create a variable named price and assinged value as 28.99
-let discount = 10; // create a varibale named discount and assingned a value as 10.
+// let price = 28.99; // create a variable named price and assinged value as 28.99
+// let discount = 10; // create a varibale named discount and assingned a value as 10.
 
-let total = price - price * (discount * 100); // create a variable named total and assing  value with discounted rate;
+// let total = price - price * (discount * 100); // create a variable named total and assing  value with discounted rate;
 
-if (total > 25) {
-  // check if total is greaterthan 25
-  freeShoping(); // execute fucntion freeShoping
-}
+// if (total > 25) {
+//   // check if total is greaterthan 25
+//   freeShoping(); // execute fucntion freeShoping
+// }
 
-let count = 10; // create a variable named count with value 10;
-while (count > 0) {
-  // iterate count till its value lessthan or equal to 0
-  juggle(); // execute fucntion juggle
-  count = count - 1; // count decreament by 1
-}
+// let count = 10; // create a variable named count with value 10;
+// while (count > 0) {
+//   // iterate count till its value lessthan or equal to 0
+//   juggle(); // execute fucntion juggle
+//   count = count - 1; // count decreament by 1
+// }
 
-let dog = { name: "Rover", weight: 45 }; // create an object named dog with keys name and weight and values respectively rover and 45.
+// let dog = { name: "Rover", weight: 45 }; // create an object named dog with keys name and weight and values respectively rover and 45.
 
-if (dog.weight > 30) {
-  // check weight of the dog is greaterthan 30
-  alert("WOOF WOOF"); // alert to user
-} else {
-  // if weight of the dog is lessthan  or equal to 30 then this part execute
-  alerrt("woof woof"); // alert to user
-}
+// if (dog.weight > 30) {
+//   // check weight of the dog is greaterthan 30
+//   alert("WOOF WOOF"); // alert to user
+// } else {
+//   // if weight of the dog is lessthan  or equal to 30 then this part execute
+//   alerrt("woof woof"); // alert to user
+// }
 
-let circleRadious = 20; // create a variable circleradious with value 20;
-let circleArea = Math.PI * (circleRadious * circleRadious); // create a variable circleArea and
-// calculate circle area with Math Function and circleRadius and asined to circleArea
+// let circleRadious = 20; // create a variable circleradious with value 20;
+// let circleArea = Math.PI * (circleRadious * circleRadious); // create a variable circleArea and
+// // calculate circle area with Math Function and circleRadius and asined to circleArea
 
-let joke = "Javascript walked into a bar...!";
-let toldJoke = false;
-let punchLine ="better watch out for these semi-colon";
-let Percentage = 20;
-let result ;
- if(toldJoke === true) {
-     alert(punchLine);
- } else {
-     alert(joke);
- }
+// let joke = "Javascript walked into a bar...!";
+// let toldJoke = false;
+// let punchLine ="better watch out for these semi-colon";
+// let Percentage = 20;
+// let result ;
+//  if(toldJoke === true) {
+//      alert(punchLine);
+//  } else {
+//      alert(joke);
+//  }
 
- let zipCode = 98104;
- let JoesFavoriteMovie = "Forbidden Planet";
- let Movieticket = 9;
- if(Movieticket >= 9) {
-     alert("Too much");
- } else {
-     alert("We're going to see" + JoesFavoriteMovie);
- }
+//  let zipCode = 98104;
+//  let JoesFavoriteMovie = "Forbidden Planet";
+//  let Movieticket = 9;
+//  if(Movieticket >= 9) {
+//      alert("Too much");
+//  } else {
+//      alert("We're going to see" + JoesFavoriteMovie);
+//  }
 
-let reader = "Dear" + "reader" + ",";
+// let reader = "Dear" + "reader" + ",";
 let newStr = "haii" + " Mr./Mrs" + reader;
 let str = reader.substring(0,3); //
 
@@ -104,6 +104,27 @@ document.write("Happy Birthday to you.<br>");
      console.log("Take one down, pass it arround");
      count = count - 1;
  }
- if(count == 0 ) {
+ if(count === 0 ) {
     console.log("No more " + word + " of beer on the wall.")
 }
+
+let joke = "javascript walked into a bar...";
+let toldJoke = false;
+let punchLine = "better watch out for those semi colons";
+let percentage = 20;
+var result;
+if(toldJoke  === true) {
+    alert(punchLine);
+} else {
+    alert(joke);
+}
+
+// Movie Night
+ let zipCode = 1234;
+ let JoesFavoriteMovie = "forbidden planet";
+ let Movieticket = 0;
+ if(Movieticket > 9 ) {
+     alert("Too Much");
+ } else {
+     alert("we are going to see " + JoesFavoriteMovie );
+ }
