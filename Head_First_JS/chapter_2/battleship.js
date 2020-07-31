@@ -2,7 +2,7 @@ let randomNo = Math.floor(Math.random() * 5),
   location1 = randomNo,
   location2 = location1 + 1,
   location3 = location2 + 1;
-  console.log(randomNo);
+console.log(randomNo);
 let guess;
 let hits = 0,
   guesses = 0,
