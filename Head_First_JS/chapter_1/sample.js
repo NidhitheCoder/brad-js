@@ -51,28 +51,30 @@
 
 // let reader = "Dear" + "reader" + ",";
 let newStr = "haii" + " Mr./Mrs" + reader;
-let str = reader.substring(0,3); //
+let str = reader.substring(0, 3); //
 
-let age = 23,cost = 100,animal="dog";
+let age = 23,
+  cost = 100,
+  animal = "dog";
 age > 14;
 cost >= 100;
 animal === "Bear";
 
 let scoops = 5;
-while(scoops > 0) {
-    document.write("Another Scoop! <br>");
-    scoops = scoops - 1;
+while (scoops > 0) {
+  document.write("Another Scoop! <br>");
+  scoops = scoops - 1;
 }
 document.write("Life without icecream is'nt same");
 
-if(scoops < 3) {
-    alert("Ice Cream is running low..");
+if (scoops < 3) {
+  alert("Ice Cream is running low..");
 }
 
-if(scoops >= 5) {
-    alert("Eat faster, Ice creams going to melt!");
-} else if(scoops < 3) {
-    alert("ice cream is running low");
+if (scoops >= 5) {
+  alert("Eat faster, Ice creams going to melt!");
+} else if (scoops < 3) {
+  alert("ice cream is running low");
 }
 
 if (scoops >= 5) {
@@ -89,23 +91,24 @@ if (scoops >= 5) {
   alert("Still Lots of ice cream left, come and get it");
 }
 
-let i = 0,name = "Joe";
+let i = 0,
+  name = "Joe";
 while (i < 2) {
-document.write("Happy Birthday to you.<br>");
-i = i + 1;
+  document.write("Happy Birthday to you.<br>");
+  i = i + 1;
 }
 document.write("Happy Birthday dear " + name + "<br>");
 document.write("Happy Birthday to you.<br>");
- var word = "bottles";
- var count = 99;
- while (count > 0) {
-     console.log(count + " " + word + " beer on the wall");
-     console.log(count + " " + word + " of beer");
-     console.log("Take one down, pass it arround");
-     count = count - 1;
- }
- if(count === 0 ) {
-    console.log("No more " + word + " of beer on the wall.")
+var word = "bottles";
+var count = 99;
+while (count > 0) {
+  console.log(count + " " + word + " beer on the wall");
+  console.log(count + " " + word + " of beer");
+  console.log("Take one down, pass it arround");
+  count = count - 1;
+}
+if (count === 0) {
+  console.log("No more " + word + " of beer on the wall.");
 }
 
 let joke = "javascript walked into a bar...";
@@ -113,18 +116,18 @@ let toldJoke = false;
 let punchLine = "better watch out for those semi colons";
 let percentage = 20;
 var result;
-if(toldJoke  === true) {
-    alert(punchLine);
+if (toldJoke === true) {
+  alert(punchLine);
 } else {
-    alert(joke);
+  alert(joke);
 }
 
 // Movie Night
- let zipCode = 1234;
- let JoesFavoriteMovie = "forbidden planet";
- let Movieticket = 0;
- if(Movieticket > 9 ) {
-     alert("Too Much");
- } else {
-     alert("we are going to see " + JoesFavoriteMovie );
- }
+let zipCode = 1234;
+let JoesFavoriteMovie = "forbidden planet";
+let Movieticket = 0;
+if (Movieticket > 9) {
+  alert("Too Much");
+} else {
+  alert("we are going to see " + JoesFavoriteMovie);
+}
