@@ -39,3 +39,6 @@
 
 
     - variable scope of a variable inside the function is within the function.
+    - Parameters shadow global variables.
+    -Javascript make 2 passes over the program(Read all the definitions, Executing the code).
+    - If you forgot to declare a globel variable it will become global variable.
