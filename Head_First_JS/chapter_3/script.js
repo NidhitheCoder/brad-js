@@ -39,17 +39,60 @@
 // bark("spike",18);
 // //  Code with function end
 
+// function whatShallWeare(temp) {
+//     if(temp < 60) {
+// console.log("Wear a jacket");
+//     } else if(temp < 70) {
+//         console.log("Wear a Sweater");
+//     } else {
+//         console.log("Wear a T-shirt");
+//     }
+// }
 
-function whatShallWeare(temp) {
-    if(temp < 60) {
-console.log("Wear a jacket");
-    } else if(temp < 70) {
-        console.log("Wear a Sweater");
-    } else {
-        console.log("Wear a T-shirt");
-    }
+// whatShallWeare(50);
+// whatShallWeare(80);
+// whatShallWeare(60);
+
+// function calculateArea(r) {
+// let area;
+// if(r <= 0) {
+//     return 0;
+// } else {
+//     area = Math.PI * r * r;
+//     return area;
+// }
+// }
+
+// let radious = 5.2;
+// let theArea = calculateArea(radious);
+// console.log("The area is " + theArea);   // output is:- The area is 84.94866535306801
+let avatar = "generic";
+let skill = 1.0;
+let pointPerLevel = 1000;
+let UserPoints = 2008;
+
+function getAvatar(points) {
+  let level = points / pointPerLevel;
+  if (level === 0) {
+    return "Teddy Bear";
+  } else if (level === 1) {
+    return "Cat";
+  } else if (level >= 2) {
+    return "Gorilla";
+  }
 }
 
-whatShallWeare(50);
-whatShallWeare(80);
-whatShallWeare(60);
+function updatePoints(bonus,newPoints) {
+    let i = 0;
+    while(i < bonus) {
+        newPoints = newPoints + skill * bonus;
+        i = i + 1;
+    }
+    number = 5; // for test globel scope of a variable inside a function without let/var/const keyword .
+    return newPoints + UserPoints;
+}
+
+UserPoints = updatePoints(2,100);
+avatar = getAvatar(2112);
+getAvatar(2112)
+console.log(number);
