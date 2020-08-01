@@ -1,12 +1,12 @@
-//  let scores = [60,58,69,54,60,57];
-//  let solution  = scores[2];
-//  console.log("Solution 2 produced " + solution + " bubbles");
+ let scores = [60,58,69,54,60,57];
+ let solution  = scores[2];
+ console.log("Solution 2 produced " + solution + " bubbles");
 
-// let flavours = ["vannila","buttorscotch","lavender","chocolate","cookie dough"];
-// let flavourOfTheday = flavours[2];
-// console.log(flavourOfTheday);
-// flavours[2] = "Vannilla Chocolate Chip";
-// console.log(flavours[2]);
+let flavours = ["vannila","buttorscotch","lavender","chocolate","cookie dough"];
+let flavourOfTheday = flavours[2];
+console.log(flavourOfTheday);
+flavours[2] = "Vannilla Chocolate Chip";
+console.log(flavours[2]);
 
 let scores = [
   50,
@@ -126,23 +126,23 @@ console.log(
   "Bubble solution #" + mostCostEffective + " is the most cost effective"
 );
 
-// let hasBubbleGum = [false, false, false, true];
-// let products = ["cho cho chocolate", "icy mint", "cake batter", "bubbleGum"];
-// var i = 0;
-// while(i < hasBubbleGum.length) {
-// if(hasBubbleGum[i]) {
-//     console.log(products[i] + " contains Bubblegum");
-// }
-// i = i + 1;
-// }
+let hasBubbleGum = [false, false, false, true];
+let products = ["cho cho chocolate", "icy mint", "cake batter", "bubbleGum"];
+var i = 0;
+while(i < hasBubbleGum.length) {
+if(hasBubbleGum[i]) {
+    console.log(products[i] + " contains Bubblegum");
+}
+i = i + 1;
+}
 
-// for (let i = 0; i < hasBubbleGum.length; i++) {
-//   if (hasBubbleGum[i]) {
-//     console.log(products[i] + " contains Bubblegum");
-//   }
-// }
-// let answer = "ten"
-// for(;answer != "fourty three";) {
-//     console.log("for loop here :-D");
-//     answer = "fourty three";
-// }
+for (let i = 0; i < hasBubbleGum.length; i++) {
+  if (hasBubbleGum[i]) {
+    console.log(products[i] + " contains Bubblegum");
+  }
+}
+let answer = "ten"
+for(;answer != "fourty three";) {
+    console.log("for loop here :-D");
+    answer = "fourty three";
+}
