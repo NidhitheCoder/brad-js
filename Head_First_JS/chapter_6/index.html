@@ -11,17 +11,17 @@
       }
     </style>
     <script>
-        function init() {
-      let planet = document.getElementById("greenPlanet");
-      planet.innerHTML = "Red alert : hit by phaser fire..";
-      planet.setAttribute("class","change-color");
-      console.log(planet.id);
-      planet.setAttribute("id","changedPlanet");
-      console.log(planet.getAttribute("id"));
-        }
+      function init() {
+        let planet = document.getElementById("greenPlanet");
+        planet.innerHTML = "Red alert : hit by phaser fire..";
+        planet.setAttribute("class", "change-color");
+        console.log(planet.id);
+        planet.setAttribute("id", "changedPlanet");
+        console.log(planet.getAttribute("id"));
+      }
 
-        window.onload = init; // This is becouse of the code inside the function is only execute after the page fulli loaded.
-        // otherwise it won't work (getting error planet is null).
+      window.onload = init; // This is becouse of the code inside the function is only execute after the page fulli loaded.
+      // otherwise it won't work (getting error planet is null).
     </script>
   </head>
   <body>
@@ -34,7 +34,7 @@
         <p id="code5">Need more salt</p>
         <p id="code6">Why this coffe getting cold?</p> -->
 
-    <p id="greenPlanet" >
+    <p id="greenPlanet">
       In green planet
       <span> You can see nature.</span>
     </p>
