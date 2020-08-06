@@ -21,9 +21,9 @@ let model = {
   shipLength: 3,
   shipSunk: 0,
   ships: [
-    { locations: ["06", "16", "26"], hits: ["", "", ""] },
-    { locations: ["24", "34", "44"], hits: ["", "", ""] },
-    { locations: ["10", "11", "12"], hits: ["", "", ""] }
+    { locations: ["0", "0", "0"], hits: ["", "", ""] },
+    { locations: ["0", "0", "0"], hits: ["", "", ""] },
+    { locations: ["0", "0", "0"], hits: ["", "", ""] }
   ],
   fire: function(guess = "16") {
     for (let i = 0; i < this.numShips; i++) {
@@ -67,20 +67,37 @@ let model = {
       let row,col;
 
       if(direction === 1) {
-          // generate a starting location for a horizontal ship
+        // generate a starting location for a horizontal ship
+        row = Math.floor(Math.random()*this.borderSize);
+        col = Math.floor(Math.random() * (this.borderSize - this.shipLength)); 
       } else{
-          // generate a starting location for a vertical ship
+        // generate a starting location for a vertical ship
+        row = Math.floor(Math.random() * (this.borderSize - this.shipLength));
+        col = Math.floor(Math.random() * this.borderSize);
       }
 
       let newShipLocations = [];
       for (let i = 0; i < this.shipLength;i++) {
           if(direction === 1) {
               // add location to array for new horizontal ship
+              newShipLocations.push(row + "" + (col+i));
           } else {
             //   add location to array for new vertical ship 
+            newShipLocations.push((row+i) + "" + col);
           }
       }
       return newShipLocations;
+  },
+  collision : function(locations) {
+    for(let i = 0;i< this.numShips;i++) {
+      let ship = model.ships[i];
+      for(let j = 0; j< locations.length; j++) {
+        if(ship.locations.indexOf(locations[j]) >= 0) {
+          return true;
+        }
+      }
+    }
+    return false;
   }
 };
 
@@ -129,6 +146,7 @@ function init() {
     fireButton.onclick = handleFireButton;
     let guessInput = document.getElementById('guessInput');
     guessInput.onkeypress = handleKeyPress;
+    model.generateShipLocations();
 }
 
 function handleFireButton() {
