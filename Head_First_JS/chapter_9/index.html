@@ -26,11 +26,10 @@
     </style>
     <script>
       function pageLoadEvent() {
-        let image = document.getElementsByTagName('img');
-        for(let i = 0; i< image.length;i++ ) {
+        let image = document.getElementsByTagName("img");
+        for (let i = 0; i < image.length; i++) {
           image[i].onclick = showAnswer;
         }
-       
       }
 
       function showAnswer() {
