@@ -13,23 +13,51 @@
         place-items: center;
         height: 100vh;
       }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
 
       img {
-        height: 50%;
-        width: 50%;
+        margin: 10px;
+        height: 350px;
+        width: 300px;
       }
     </style>
     <script>
-      //   function pageLoadEvent() {
-      //     alert("I'm alive.!");
-      //   }
+      function pageLoadEvent() {
+        let image = document.getElementsByTagName('img');
+        for(let i = 0; i< image.length;i++ ) {
+          image[i].onclick = showAnswer;
+        }
+       
+      }
 
-      //   window.onload = pageLoadEvent;
+      function showAnswer() {
+        let image = document.getElementById("zero");
+        if (
+          image.src ===
+          "http://127.0.0.1:5500/Head_First_JS/chapter_9/img/zeroblur.jpg"
+        ) {
+          image.src = "img/zero.jpg";
+        } else {
+          image.src = "img/zeroblur.jpg";
+        }
+      }
+
+      window.onload = pageLoadEvent;
     </script>
   </head>
   <body>
     <h1>Chapter 9 : Asynchronous coding</h1>
-    <img id="zero" src="img/zeroBlur.jpeg" />
+    <div class="container">
+      <img id="zero" src="img/zeroblur.jpg" />
+      <img id="one" src="img/oneblur.jpg" />
+      <img id="two" src="img/twoblur.jpg" />
+      <img id="three" src="img/threeblur.jpg" />
+      <img id="four" src="img/fourblur.jpg" />
+      <img id="five" src="img/fiveblur.jpg" />
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
