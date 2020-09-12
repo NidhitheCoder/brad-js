@@ -26,22 +26,13 @@
     </style>
     <script>
       function pageLoadEvent() {
-        let image = document.getElementsByTagName("img");
-        for (let i = 0; i < image.length; i++) {
-          image[i].onclick = showAnswer;
-        }
+        let image = document.getElementById("zero");
+          image.onclick = showAnswer;
       }
 
       function showAnswer() {
         let image = document.getElementById("zero");
-        if (
-          image.src ===
-          "http://127.0.0.1:5500/Head_First_JS/chapter_9/img/zeroblur.jpg"
-        ) {
           image.src = "img/zero.jpg";
-        } else {
-          image.src = "img/zeroblur.jpg";
-        }
       }
 
       window.onload = pageLoadEvent;
