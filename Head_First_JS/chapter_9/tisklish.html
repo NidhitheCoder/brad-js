@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Don't resize me.. I'm ticklish</title>
+    <script>
+    function resize() {
+        let element = document.getElementById("display");
+        element.innerHTML = element.innerHTML + " that tickles";
+    }
+    </script>
+</head>
+<body>
+    <p id="display">
+        Whatever you do , dont rresize this window! I'm warning you ! 
+    </p>
+    <script>
+    window.onresize = resize;
+    </script>
+</body>
+</html>

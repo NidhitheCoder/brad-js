@@ -28,7 +28,9 @@
       function pageLoadEvent() {
         let images = document.getElementsByTagName("img");
         for (let i = 0; i < images.length; i++) {
-          images[i].onclick = showAnswer;
+          // images[i].onclick = showAnswer;
+          images[i].onmouseover = showAnswer;
+          images[i].onmouseout = reBlur;
         }
       }
 
@@ -38,11 +40,12 @@
         name = "img/" + name + ".jpg";
         image.src = name;
 
-        setTimeout(reBlur, 2000, image);
+        // setTimeout(reBlur, 2000, image);
       }
 
-      function reBlur(image) {
-        let name = image.id;
+      function reBlur(e) {
+        let image = e.target;
+         let name = image.id;
         name = "img/" + name + "blur.jpg";
         image.src = name;
       }
