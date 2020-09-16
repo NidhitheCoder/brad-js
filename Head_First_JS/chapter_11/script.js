@@ -64,14 +64,13 @@
 //   }
 // }
 
-
 // if (migrating) {
 //     quack(4);
 //     console.log(fly);
 //     fly(4);
 //   }
 
-// lexical declaration 
+// lexical declaration
 let str = "This string have globel scope";
 
 // // globel scope of the variables
@@ -87,14 +86,13 @@ let str = "This string have globel scope";
 
 // let result = whereAreYou();
 // console.log(result);
+function whereAreYou() {
+  let str = "local scope string";
+  function inner() {
+    return str;
+  }
 
-function whereAreYou(){
-    let str = "local scope string";
-    function inner(){
-        return str;
-    }
-
-    return inner;
+  return inner;
 }
 
 let innerFunction = whereAreYou();
