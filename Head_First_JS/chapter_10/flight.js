@@ -46,9 +46,10 @@ function serveCustomer(passenger) {
   //   createDrinkOrder(passenger);
 
   let getDrinkOrderFunction = createDrinkOrder(passenger);
+  let getDinnerOrderFUnction = createDinnerOrder(passenger);
   getDrinkOrderFunction();
   // get dinner order function
-  getDrinkOrderFunction();
+  getDinnerOrderFUnction();
   getDrinkOrderFunction();
   // show movie
   getDrinkOrderFunction();
@@ -66,6 +67,24 @@ function createDrinkOrder(passenger) {
   } else {
     orderFunction = function() {
       console.log("Your choice is cola or water.");
+    };
+  }
+  return orderFunction;
+}
+
+function createDinnerOrder(passenger) {
+  let orderFunction;
+  if (passenger.ticket === "First Class") {
+    orderFunction = function() {
+      console.log("Whould you like chicken or pasta ?");
+    };
+  } else if (passenger.ticket === "Premium Economy") {
+    orderFunction = function() {
+      console.log("Would you like a snack box or cheese plate ?");
+    };
+  } else {
+    orderFunction = function() {
+      console.log("Would you like peanuts or pretzels ?");
     };
   }
   return orderFunction;
