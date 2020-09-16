@@ -1,4 +1,3 @@
-
 // let board = document.getElementById("board");
 // // function handler(){
 // //    board.innerHTML = "Hellow welcome";
@@ -42,31 +41,62 @@
 //     }, 10000);
 // }
 
-let migrating = true;
+// let migrating = true;
 
-if(migrating) {
-    quack(4);
-    console.log(fly);
-    fly(4);
+// let fly = function(num) {
+//   let sound = "Flying";
+
+//   function wingFlapper() {
+//     console.log(sound);
+//   }
+//   for (let i = 0; i < num; i++) {
+//     wingFlapper();
+//   }
+// };
+
+// function quack(num) {
+//   let sound = "Quack";
+//   function quacker() {
+//     console.log(sound);
+//   }
+//   for (let i = 0; i < num; i++) {
+//     quacker();
+//   }
+// }
+
+
+// if (migrating) {
+//     quack(4);
+//     console.log(fly);
+//     fly(4);
+//   }
+
+// lexical declaration 
+let str = "This string have globel scope";
+
+// // globel scope of the variables
+// function whereAreYou(){
+//     let str =" I have local scope. inside whereAreYou function";
+//     // return str;
+
+//     function inner(){
+//         return str;
+//     }
+//     return inner();
+// }
+
+// let result = whereAreYou();
+// console.log(result);
+
+function whereAreYou(){
+    let str = "local scope string";
+    function inner(){
+        return str;
+    }
+
+    return inner;
 }
 
-let fly = function (num) {
-    let sound = "Flying";
-
-    function wingFlapper(){
-        console.log(sound);
-    }
-    for(let i=0;i<num;i++){
-       wingFlapper();
-    }
-};
-
-function quack(num){
-    let sound = "Quack";
-    function quacker(){
-        console.log(sound);
-    }
-    for(let i=0;i<num;i++){
-       quacker();
-    }
-}
+let innerFunction = whereAreYou();
+let result = innerFunction();
+console.log(result);
