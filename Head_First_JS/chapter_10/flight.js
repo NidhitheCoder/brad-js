@@ -3,7 +3,7 @@ var passengers = [
   { name: "sara", paid: true, ticket: "Coach" },
   { name: "john", paid: true, ticket: "First Class" },
   { name: "alex", paid: false, ticket: "Coach" },
-  { name: "chris", paid: true, ticket: "First Class" }
+  { name: "chris", paid: true, ticket: "Premium Economy" }
 ];
 
 function processPassengers(passengers, testFunction) {
@@ -61,6 +61,8 @@ function createDrinkOrder(passenger) {
     orderFunction = function() {
       console.log("Whould you like a cocktail or wine ?");
     };
+  } else if (passenger.ticket === "Premium Economy") {
+    console.log("Would you like cola,water or wine?");
   } else {
     orderFunction = function() {
       console.log("Your choice is cola or water.");
