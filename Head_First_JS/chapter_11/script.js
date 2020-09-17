@@ -70,31 +70,102 @@
 //     fly(4);
 //   }
 
-// lexical declaration
-let str = "This string have globel scope";
+// // lexical declaration
+// let str = "This string have globel scope";
 
-// // globel scope of the variables
-// function whereAreYou(){
-//     let str =" I have local scope. inside whereAreYou function";
-//     // return str;
+// // // globel scope of the variables
+// // function whereAreYou(){
+// //     let str =" I have local scope. inside whereAreYou function";
+// //     // return str;
 
-//     function inner(){
-//         return str;
-//     }
-//     return inner();
+// //     function inner(){
+// //         return str;
+// //     }
+// //     return inner();
+// // }
+
+// // let result = whereAreYou();
+// // console.log(result);
+// function whereAreYou() {
+//   let str = "local scope string";
+//   function inner() {
+//     return str;
+//   }
+
+//   return inner;
 // }
 
-// let result = whereAreYou();
+// let innerFunction = whereAreYou();
+// let result = innerFunction();
 // console.log(result);
-function whereAreYou() {
-  let str = "local scope string";
-  function inner() {
-    return str;
-  }
 
-  return inner;
+// // usual way for counter
+// let count = 0;
+
+// function counter() {
+//   count = count + 1;
+//   return count;
+// }
+
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+
+// // Using closure
+
+// function makeCounter() {
+//   let count1 = 0;
+//   function counter1() {
+//     count1 = count1 + 1;
+//     return count1;
+//   }
+//   return counter1; // This is closure. it holds count in its environment.
+// }
+
+// let doCount = makeCounter();
+// console.log(doCount());
+// console.log(doCount());
+// console.log(doCount());
+
+// // test one : closure
+// function makePassword(password) {
+//   return function(passwordGuess) {
+//     return passwordGuess === password;
+//   };
+// }
+
+// let doMakePassword = makePassword("truePassword");
+// console.log(doMakePassword("wrongPassword"));
+// console.log(doMakePassword("truePassword"));
+// doMakePassword = makePassword("12345");
+// console.log(doMakePassword("1236"));
+// console.log(doMakePassword("12345"));
+
+// // // test 2  closure:
+// function multN(n) {
+//   return function(num) {
+//     return num * n;
+//   };
+// }
+
+// let Multiply = multN(3);
+// console.log(Multiply(2));
+// console.log(Multiply(5));
+
+// function makeTimer(doneMessage,n) {
+//   setTimeout(function() {
+//     alert(doneMessage);
+//   }, n);
+// };
+
+// makeTimer("Cookies are done",1000);
+
+function handler(doneMessage) {
+  alert(doneMessage);
 }
 
-let innerFunction = whereAreYou();
-let result = innerFunction();
-console.log(result);
+function makeTimer(doneMessage, n) {
+  setTimeout(handler(doneMessage), n);
+}
+
+makeTimer("cookies are Done.!", 5000);
