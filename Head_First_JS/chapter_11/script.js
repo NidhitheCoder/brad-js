@@ -160,12 +160,40 @@
 
 // makeTimer("Cookies are done",1000);
 
-function handler(doneMessage) {
-  alert(doneMessage);
+// function handler(doneMessage) {
+//   alert(doneMessage);
+// }
+
+// function makeTimer(doneMessage, n) {
+//   setTimeout(handler(doneMessage), n);
+// }
+
+// makeTimer("cookies are Done.!", 5000);
+
+// function setTimer(doneMessage, n) {
+//   alert(doneMessage);
+//   setTimeout(() => {
+//     alert(doneMessage);
+//   }, n);
+//   doneMessage = " heyy new";
+// }
+
+// setTimer("Cookies are done..!", 3000);
+
+// (function(food){
+//   if(food === "cookies") {
+//     alert("More please...");
+//   } else if(food === "cake") {
+//     alert("Yum yum..");
+//   }
+// })("cookies");
+
+function testFood(food = "cookies") {
+  if (food === "cookies") {
+    alert("More please...");
+  } else {
+    alert("Yum yum");
+  }
 }
 
-function makeTimer(doneMessage, n) {
-  setTimeout(handler(doneMessage), n);
-}
-
-makeTimer("cookies are Done.!", 5000);
+testFood();
