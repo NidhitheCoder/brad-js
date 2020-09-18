@@ -19,21 +19,21 @@
 //     this.canFly = canFly;
 // }
 
-function Dog(name,breed,weight) {
-    this.name = name;
-    this.breed = breed;
-    this.weight = weight;
-    this.bark = function(){
-        if(this.weight > 25){
-            alert (this.name + " says woof!");
-        } else {
-            alert(this.name + " says yip.!");
-        }
-    }
-}
+// function Dog(name,breed,weight) {
+//     this.name = name;
+//     this.breed = breed;
+//     this.weight = weight;
+//     this.bark = function(){
+//         if(this.weight > 25){
+//             alert (this.name + " says woof!");
+//         } else {
+//             alert(this.name + " says yip.!");
+//         }
+//     }
+// }
 
-let fido = new Dog("Fido","Mixed",38);
-console.log(typeof fido);
+// let fido = new Dog("Fido","Mixed",38);
+// console.log(typeof fido);
 // let fluffy = new Dog("Fluffy","Puddle",30);
 // let spot = new Dog("Spot","Chihuahua",10);
 // let dogs = [fido,fluffy,spot];
@@ -119,51 +119,160 @@ console.log(typeof fido);
 //   cars[i].stop();
 // }
 
-// with object parameters
-function Car(params) {
-  this.make = params.make;
-  this.model = params.model;
-  this.year = params.year;
-  this.color = params.color;
-  this.passengers = params.passengers;
-  this.convertible = params.convertible;
-  this.milage = params.milage;
-  this.started = false;
-  this.start = function() {
-    this.started = true;
-  };
-  this.stop = function() {
-    this.started = false;
-  };
-  this.drive = function() {
-    if (this.started) {
-      console.log(this.make + " " + this.model + " goes zoom zoom");
-    }
-  };
+// // with object parameters
+// function Car(params) {
+//   this.make = params.make;
+//   this.model = params.model;
+//   this.year = params.year;
+//   this.color = params.color;
+//   this.passengers = params.passengers;
+//   this.convertible = params.convertible;
+//   this.milage = params.milage;
+//   this.started = false;
+//   this.start = function() {
+//     this.started = true;
+//   };
+//   this.stop = function() {
+//     this.started = false;
+//   };
+//   this.drive = function() {
+//     if (this.started) {
+//       console.log(this.make + " " + this.model + " goes zoom zoom");
+//     }
+//   };
+// }
+
+// let chevy = {
+//   make: "chevy",
+//   model: "Bill Air",
+//   year: 1957,
+//   color: "red",
+//   passengers: 2,
+//   convertible: false,
+//   milage: 1021
+// };
+
+// let test = {
+//     make:"Webville Motors",
+//     model : "Test car",
+//     year:2013,
+//     color:"marine",
+//     passengers:2,
+//     convertible:true,
+//     milage:21
+// };
+
+// // both chevy and test car are the insatnce of car class or constructor
+// let chevyCar = new Car(chevy);
+// let testCar = new Car(test);
+
+// // console.log(chevyCar);
+// // console.log(testCar);
+// console.log(typeof chevyCar);
+
+// if(chevyCar instanceof Car){
+//   console.log("chevy is a car");
+// };
+
+// function dogCatcher(dog) {
+//   if (dog instanceof Dog) {
+//     return true;
+//   }
+//   return false;
+// }
+
+// function Cat(name, breed, weight) {
+//   this.name = name;
+//   this.breed = breed;
+//   this, (weight = weight);
+// }
+
+// let meaw = new Cat("Meaw", "Siamese", 10);
+// let wisker = new Cat("Wiskers", "Mixed", 12);
+
+// let fido = { name: "fido", breed: "Mixed", weight: 38 };
+
+// function Dog(name, breed, weight) {
+//   this.name = name;
+//   this.breed = breed;
+//   this.weight = weight;
+//   this.bark = function() {
+//     if (this.weight > 25) {
+//       console.log(this.name + " says Woof..!");
+//     } else {
+//       console.log(this.name + " says yip...!");
+//     }
+//   };
+// }
+
+// let fluffy = new Dog("Fluffy", "Poodle", 30);
+// let spot = new Dog("Spot", "Chihuahua", 10);
+// let dogs = [meaw, wisker, fido, fluffy, spot];
+
+// for (let i = 0; i < dogs.length; i++) {
+//   if (dogCatcher(dogs[i])) {
+//     console.log(dogs[i].name + " is a dog.");
+//   } else {
+//     console.log(dogs[i].name + " is not a dog.");
+//   }
+// };
+
+// spot.owner = "Bob";
+// delete  spot.weight;
+// console.log(dogs);
+
+// spot.run = function(){
+//  console.log("So happy.. its running");
+// }
+
+// console.log(wisker.run());
+
+// let now = new Date();
+// console.log(now);
+// let dateString = now.toString();
+// let theYear = now.getFullYear();
+// let dayOfTheWeek = now.getDay();
+// console.log(dateString);
+// console.log(theYear);
+// console.log(dayOfTheWeek);
+// let birthday = new Date("May 1 1993");
+// console.log(birthday);
+
+// // creating empty array
+// let emptyArray = new Array();
+// console.log(emptyArray);
+
+// // add an element to the array
+// emptyArray[0] = 99;
+// console.log(emptyArray);
+
+// we can specify array size when creating an array like this. 
+// we can easly added more number of elements in future
+let arr2 = new Array(3);
+//  add items to specific places
+arr2[0] = 1;
+arr2[1] = 2;
+arr2[2] = 3;
+//   trying to add an extra element to  fixed size array
+arr2[3] = 4;
+
+console.log(arr2);
+console.log(arr2.reverse());
+console.log(arr2.join("-"));
+console.log(arr2.every(function(x){
+  return ((x%2) !== 1);
+}));
+
+// literal syntax for creating arrays
+let arrNew = [1,2,3,4,5];
+console.log(arrNew);
+
+// constructor using another way to creating arrays.
+let array1 = new Array("a","b","c");
+console.log(array1);
+
+let n = getArrayWidgetFromDatabase();
+let widgets = new Array(n);
+for (let i =0 ;i< widgets.length;i++){
+  widgets[i] = getDatabsaeRecord();
 }
-
-let chevy = {
-  make: "chevy",
-  model: "Bill Air",
-  year: 1957,
-  color: "red",
-  passengers: 2,
-  convertible: false,
-  milage: 1021
-};
-
-let test = {
-    make:"Webville Motors",
-    model : "Test car",
-    year:2013,
-    color:"marine",
-    passengers:2,
-    convertible:true,
-    milage:21
-};
-
-let chevyCar = new Car(chevy);
-let testCar = new Car(test);
-// console.log(chevyCar);
-// console.log(testCar);
-console.log(typeof chevyCar);
