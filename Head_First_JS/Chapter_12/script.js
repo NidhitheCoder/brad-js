@@ -227,6 +227,7 @@
 
 // console.log(wisker.run());
 
+// // Bulid in Objects in javascripts
 // let now = new Date();
 // console.log(now);
 // let dateString = now.toString();
