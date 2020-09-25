@@ -1,135 +1,136 @@
-function Dog(name, weight, breed) {
-  this.species = "Canine";
-  this.name = name;
-  this.weight = weight;
-  this.breed = breed;
-  // this.bark = function() {
-  //   if (this.weight > 10) {
-  //     console.log("Woof woof");
-  //   } else {
-  //     console.log("yip yip");
-  //   }
-  // };
-}
 
-let fido = new Dog("fido", 8, "mixed");
-let spoofy = new Dog("Spoofy", 8, "chihuahua");
-spoofy.bark = function bark() {
-  console.log("woof woof by spoofy");
-};
+// function Dog(name, weight, breed) {
+//   this.species = "Canine";
+//   this.name = name;
+//   this.weight = weight;
+//   this.breed = breed;
+//   // this.bark = function() {
+//   //   if (this.weight > 10) {
+//   //     console.log("Woof woof");
+//   //   } else {
+//   //     console.log("yip yip");
+//   //   }
+//   // };
+// }
 
-Dog.prototype.run = function() {
-  console.log("Running");
-};
-
-Dog.prototype.wag = function() {
-  console.log("Wag");
-};
-
-Dog.prototype.bark = function() {
-  if (this.weight > 10) {
-    console.log("Woof Woof");
-  } else {
-    console.log("Yip Yip");
-  }
-};
-
-console.log(fido);
-console.log(spoofy);
-fido.bark();
-spoofy.bark();
-fido.run();
-fido.wag();
-
-// Dog.prototype.sit = function() {
-//   console.log(this.name + " is now sitting.");
+// let fido = new Dog("fido", 8, "mixed");
+// let spoofy = new Dog("Spoofy", 8, "chihuahua");
+// spoofy.bark = function bark() {
+//   console.log("woof woof by spoofy");
 // };
 
-// spoofy.sit();
+// Dog.prototype.run = function() {
+//   console.log("Running");
+// };
 
-// An intersting way for implementing sit method
-Dog.prototype.sitting = false;
+// Dog.prototype.wag = function() {
+//   console.log("Wag");
+// };
 
-Dog.prototype.sit = function() {
-  if (this.sitting) {
-    console.log(this.name + " is already sitting.");
-  } else {
-    this.sitting = true;
-    console.log(this.name + " is now sitting.");
-  }
-};
+// Dog.prototype.bark = function() {
+//   if (this.weight > 10) {
+//     console.log("Woof Woof");
+//   } else {
+//     console.log("Yip Yip");
+//   }
+// };
 
-// spoofy.sit();
-// spoofy.sit();
+// console.log(fido);
+// console.log(spoofy);
+// fido.bark();
+// spoofy.bark();
+// fido.run();
+// fido.wag();
 
-console.log(spoofy.hasOwnProperty("sitting"));
-spoofy.sitting = true;
-console.log(spoofy.hasOwnProperty("sitting"));
-console.log(fido.sitting);
-// spoofy.sit();
-// fido.sit();
+// // Dog.prototype.sit = function() {
+// //   console.log(this.name + " is now sitting.");
+// // };
 
-function ShowDog(name, weight, breed, handler) {
-  // this.name = name;
-  // this.weight = weight;
-  // this.breed = breed;
-  Dog.call(this, name, breed, weight);
-  this.handler = handler;
-}
-console.log(ShowDog);
-ShowDog.prototype = new Dog();
+// // spoofy.sit();
 
-ShowDog.prototype.leauge = "Webville";
-ShowDog.prototype.stack = function() {
-  console.log("slack");
-};
+// // An intersting way for implementing sit method
+// Dog.prototype.sitting = false;
 
-ShowDog.prototype.bait = function() {
-  console.log("Bait");
-};
+// Dog.prototype.sit = function() {
+//   if (this.sitting) {
+//     console.log(this.name + " is already sitting.");
+//   } else {
+//     this.sitting = true;
+//     console.log(this.name + " is now sitting.");
+//   }
+// };
 
-ShowDog.prototype.gait = function(kind) {
-  console.log(kind + "ing");
-};
+// // spoofy.sit();
+// // spoofy.sit();
 
-ShowDog.prototype.groom = function() {
-  console.log("Groom");
-};
+// console.log(spoofy.hasOwnProperty("sitting"));
+// spoofy.sitting = true;
+// console.log(spoofy.hasOwnProperty("sitting"));
+// console.log(fido.sitting);
+// // spoofy.sit();
+// // fido.sit();
 
-// let scotty = new ShowDog("Scotty", "Scotty terrier", 15, "Cookie");
+// function ShowDog(name, weight, breed, handler) {
+//   // this.name = name;
+//   // this.weight = weight;
+//   // this.breed = breed;
+//   Dog.call(this, name, breed, weight);
+//   this.handler = handler;
+// }
+// console.log(ShowDog);
+// ShowDog.prototype = new Dog();
 
-// scotty.stack();
-// scotty.bait();
-// scotty.bark();
-// console.log("leagues : " + scotty.leauge);
-// console.log("species : " + scotty.species);
+// ShowDog.prototype.leauge = "Webville";
+// ShowDog.prototype.stack = function() {
+//   console.log("slack");
+// };
 
-if (fido instanceof Dog) {
-  console.log("Fido is a dog");
-}
+// ShowDog.prototype.bait = function() {
+//   console.log("Bait");
+// };
 
-if (fido instanceof ShowDog) {
-  console.log("Fido is a Showdog");
-}
+// ShowDog.prototype.gait = function(kind) {
+//   console.log(kind + "ing");
+// };
 
-let scotty = new ShowDog("scotty", "scotty terriar", 15, "cookie");
-if (scotty instanceof Dog) {
-  console.log("Scotty is a dog");
-}
+// ShowDog.prototype.groom = function() {
+//   console.log("Groom");
+// };
 
-if (scotty instanceof ShowDog) {
-  console.log("Scotty is also a showdog also");
-}
+// // let scotty = new ShowDog("Scotty", "Scotty terrier", 15, "Cookie");
 
-console.log("Fido is a contstructor is " + fido.constructor);
-console.log("Scotty constructor is " + scotty.constructor);
+// // scotty.stack();
+// // scotty.bait();
+// // scotty.bark();
+// // console.log("leagues : " + scotty.leauge);
+// // console.log("species : " + scotty.species);
 
-let toy = new Dog("Toy", 12, "no breed");
-console.log(toy.toString());
-Dog.prototype.toString = function() {
-  return this.name + " is included in " + this.breed;
-};
-console.log(toy.toString());
+// if (fido instanceof Dog) {
+//   console.log("Fido is a dog");
+// }
+
+// if (fido instanceof ShowDog) {
+//   console.log("Fido is a Showdog");
+// }
+
+// let scotty = new ShowDog("scotty", "scotty terriar", 15, "cookie");
+// if (scotty instanceof Dog) {
+//   console.log("Scotty is a dog");
+// }
+
+// if (scotty instanceof ShowDog) {
+//   console.log("Scotty is also a showdog also");
+// }
+
+// console.log("Fido is a contstructor is " + fido.constructor);
+// console.log("Scotty constructor is " + scotty.constructor);
+
+// let toy = new Dog("Toy", 12, "no breed");
+// console.log(toy.toString());
+// Dog.prototype.toString = function() {
+//   return this.name + " is included in " + this.breed;
+// };
+// console.log(toy.toString());
 
 // function Robot(name, year, owner) {
 //   this.name = name;
@@ -240,3 +241,48 @@ console.log(toy.toString());
 // simon.makeCoffee();
 // simon.Blinklights();
 // simon.speak;
+
+// String.prototype.cliche = function() {
+//   let cliche = ["lock and load", "touch base", "open the kimono"];
+//   for (let i = 0; i < cliche.length; i++) {
+//     let index = this.indexOf(cliche[i]);
+//     if (index >= 0) {
+//       return true;
+//     }
+//   }
+//   return false;
+// };
+
+// let sentances = [
+//   "I'll send my car around to pick you up.",
+//   "let's touch base in the morning and seee where we are",
+//   "we don't want to open the kimono ,we just want to inform them."
+// ];
+
+// for(let j =0 ; j < sentances.length;j++){
+//   let phrase = sentances[j];
+//   if(phrase.cliche()){
+//     console.log("CLICHE ALERT: ",phrase);
+//   }
+// };
+
+String.prototype.palindrome = function() {
+  let revArr = this.split("")
+    .reverse()
+    .join();
+  let letterArr = this.split("").join();
+
+  if (letterArr === revArr) {
+    return true;
+  }
+  return false;
+};
+
+let str = "malayalam";
+console.log(str.palindrome());
+
+function meditate () {
+  console.log("Everything is an object");
+}
+
+alert(meditate instanceof Object);
