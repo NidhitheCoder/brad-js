@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chapter 10</title>
+    <script>
+let migrating = true;
+
+        // Method 1  = function expression
+     function quack(num) {
+         for(let i=0;i<num;i++) {
+             console.log("Quack..!");
+         }
+     }
+
+    //  quack(3);
+
+    //  Method 2 = referance to a function
+     let fly = function(num) {
+         for(let j=0;j<num;j++){
+             console.log("Fly..!");
+         }
+     }
+
+
+     if(migrating){
+         quack(3);
+         fly(5);
+         let superFly = fly;
+        let superQuack = quack;
+        superFly(2);
+        superQuack(6);
+     }
+    //  fly(2);
+     </script>
+</head>
+<body>
+    <script src="game.js"></script>
+</body>
+</html>
