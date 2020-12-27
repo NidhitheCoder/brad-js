@@ -279,7 +279,12 @@ String.prototype.palindrome = function() {
 };
 
 let str = "malayalam";
-console.log(str.palindrome());
+  
+  if(str.palindrome()){
+    console.log(str + " is a palidrome");
+  } else {
+    console.log(str + " is not a palindrome");
+  }
 
 function meditate () {
   console.log("Everything is an object");

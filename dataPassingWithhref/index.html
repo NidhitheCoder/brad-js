@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      .body {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: green;
+      }
+      .name {
+        width: 120px;
+        border: 1px solid grey;
+      }
+      .save {
+        width: 120px;
+        border: 1px solid grey;
+        background-color: blue;
+      }
+    </style>
+    <title>Data passing using href</title>
+  </head>
+  <body>
+    <div class="box">
+      <label for="name">Name</label>
+      <input id="name" type="text" class="name" />
+      <button id="save" class="save">
+        Save And View profile
+      </button>
+    </div>
+    <script src="name.js"></script>
+  </body>
+</html>
