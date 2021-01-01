@@ -13,3 +13,21 @@ console.log(isEqualTo100(48, 52));
 const getFileExtension = str => str.slice(str.lastIndexOf("."));
 console.log(getFileExtension("index.html"));
 console.log(getFileExtension("webpack.config.js"));
+
+// Exercise : 3
+// Write a javascript program to replace every charactor
+//  in a given  string  with the character following it in the alphabet.
+
+//  String.fromCharCode
+// CharCodeAt
+
+const moveCharsForward = str =>
+  str
+    .split("")
+    .map(char => String.fromCharCode(char.charCodeAt(0) + 1))
+    .join("");
+console.log(moveCharsForward("abcd"));
+console.log(moveCharsForward('z'));
+console.log(moveCharsForward('Smith'));
+
+// Exercise : 4
