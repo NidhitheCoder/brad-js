@@ -27,7 +27,27 @@ const moveCharsForward = str =>
     .map(char => String.fromCharCode(char.charCodeAt(0) + 1))
     .join("");
 console.log(moveCharsForward("abcd"));
-console.log(moveCharsForward('z'));
-console.log(moveCharsForward('Smith'));
+console.log(moveCharsForward("z"));
+console.log(moveCharsForward("Smith"));
 
 // Exercise : 4
+// Write a javascript program to get the current date.
+// expected output :
+// mm-dd-yyyy,mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy
+
+const formatDate = (date = new Date()) => {
+  const days = date.getDate() + 1;
+  const months = date.getMonth() + 1;
+  const year = date.getFullYear();
+  return `${days} /${months}/${year}`;
+};
+
+console.log(formatDate());
+
+// Exercise : 5
+// Write a javascript program to create a new string adding 
+// "New!" infront of a given string. If the given string Begin
+//  with "New!" already then return the original string
+
+const addNew = (str) =>str.indexOf('New!') ? `New! ${str}`: str;
+console.log(addNew('Office New!'));
