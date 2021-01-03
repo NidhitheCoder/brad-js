@@ -10,3 +10,6 @@
 - The "New function" syntax is another way to create function. It's rarely used , But sometimes  there's no alternative.
 - Syntax:
     let func = new Function([arg-1,arg-2,...,arg-N],funcitonBody);
+
+### Arrow functions
+- Arrow functions are anonymous and change the way this binds in functions. It makes our code more concise  and simplifies functions scoping and this keyword.

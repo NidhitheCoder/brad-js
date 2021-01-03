@@ -24,3 +24,15 @@ console.log(add());
 // #3 The "New function"
 let sum = new Function('a','b', 'return a+b');
 console.log(sum(5,2));
+
+// #4 Arrow Function
+ hello = () => {
+      document.getElementById("demo").innerHTML += this;
+};
+
+// window object call the function
+window.addEventListener('load',hello);
+// Button object call function
+document.getElementById("btn").addEventListener('click',hello);
+
+// #5 Rest and spread Operator 
