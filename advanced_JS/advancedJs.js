@@ -36,3 +36,26 @@ window.addEventListener('load',hello);
 document.getElementById("btn").addEventListener('click',hello);
 
 // #5 Rest and spread Operator 
+// rest operator
+const fun = (...input) =>{
+    let sum = 0;
+    for(let i of input){
+        sum +=i;
+    }
+    return sum;
+}
+
+console.log(fun(10,20,30,40));
+console.log(fun(1,2,4));
+console.log(fun(100,20,3));
+
+// spread operator
+let arr1 =[1,2,3];
+let arr2 = [ 5,6,7];
+let arr = [...arr1,...arr2];
+console.log(arr);
+
+// #6 Global object
+alert("Hello");
+// similer to 
+window.alert("Hello");

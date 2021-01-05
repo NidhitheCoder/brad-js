@@ -13,3 +13,9 @@
 
 ### Arrow functions
 - Arrow functions are anonymous and change the way this binds in functions. It makes our code more concise  and simplifies functions scoping and this keyword.
+
+### rest operator and spread operator
+- Many javascript build in functions support an arbitory number of arguments such as.
+
+### Global Object
+- the global object provides  variables and functions that are available anywhere. By default, those that are build into the language or the environment . Recently gobal This was added to the language. As a standerdised name for a global object , that should be supported accross  all environment.
