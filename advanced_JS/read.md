@@ -19,3 +19,7 @@
 
 ### Global Object
 - the global object provides  variables and functions that are available anywhere. By default, those that are build into the language or the environment . Recently gobal This was added to the language. As a standerdised name for a global object , that should be supported accross  all environment.
+
+### Function objects 
+- In javascript functions are objects itself.
+- Properties :- name and length

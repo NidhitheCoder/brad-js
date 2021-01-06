@@ -59,3 +59,14 @@ console.log(arr);
 alert("Hello");
 // similer to 
 window.alert("Hello");
+
+// Function Objects
+const sayHi = () => {
+console.log("Hi");
+}
+
+console.log(sayHi.name);
+const f2 = (a,b) =>{};
+const many = (a,b,...more) => {};
+console.log(f2.length);
+console.log(many.length);
