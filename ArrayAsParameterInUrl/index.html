@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Main Page</title>
+  </head>
+  <body>
+    <div>
+      <button id="sendBtn">Send</button>
+    </div>
+    <script>
+        const arr =['Nidheesh','Cochin',23];
+        let arrayStr = encodeURIComponent(JSON.stringify(arr));
+      const btn = document.getElementById("sendBtn");
+      btn.addEventListener("click", () => {
+        console.log("Sending...");
+        window.location.href = 'http://127.0.0.1:5500/ArrayAsParameterInUrl/profile.html?details=' + arrayStr;
+      });
+    </script>
+  </body>
+</html>
